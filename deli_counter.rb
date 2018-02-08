@@ -22,20 +22,20 @@ def take_a_number(array, name)
   puts "Welcome, #{name}. You are number #{array.length} in line."
 end
 
-# def now_serving(array)
-#   if array.empty?
-#     puts "There is nobody waiting to be served!"
-#   else
-#     puts "Currently serving #{array[0]}."
-#     array.shift
-#   end
-# end
-
 def now_serving(array)
-  while !array.empty?
+  if array.empty?
+    puts "There is nobody waiting to be served!"
+  else
     puts "Currently serving #{array[0]}."
     array.shift
   end
-
-  return "There is nobody waiting to be served!" if array.empty?
 end
+
+# def now_serving(array)
+#   while !array.empty?
+#     puts "Currently serving #{array[0]}."
+#     array.shift
+#   end
+#
+#   return "There is nobody waiting to be served!" if array.empty?
+# end
